@@ -1,2 +1,3 @@
-# vagrant-docker-box
-Docker based Vagrant box
+# Vagrant Docker Box
+
+Vagrant Box with Docker and Docker Compose for a quick startup.
