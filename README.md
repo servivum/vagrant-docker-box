@@ -2,6 +2,10 @@
 
 Vagrant Box with Docker and Docker Compose for a quick startup.
 
+It's shipped with a tiny Debian host system, some utilities like Git, 
+Docker, Docker Compose and a docker-compose.yml for spinning up a LEMP 
+stack.
+
 ## Requirements
 
 - VirtualBox
