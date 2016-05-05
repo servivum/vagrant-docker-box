@@ -1,0 +1,26 @@
+version: "2"
+
+services:
+  nginx:
+    image: servivum/nginx:1.10
+    ports:
+      - "80:80"
+      - "443:443"
+    links:
+      - php
+    volumes:
+     - "./etc/nginx/conf.d:/etc/nginx/conf.d"
+     - "./src:/var/www"
+  php:
+    image: servivum/php:7.0-fpm
+    links:
+      - mariadb
+    volumes:
+      - "./src:/var/www"
+  mariadb:
+    image: mariadb:10.1
+    environment:
+      - MYSQL_ROOT_PASSWORD="vagrant"
+      - MYSQL_DATABASE="vagrant"
+      - MYSQL_USER="vagrant"
+      - MYSQL_PASSWORD="vagrant"
